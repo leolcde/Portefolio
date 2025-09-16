@@ -99,7 +99,7 @@ function App() {
       </div>
       <div className="max-w-4xl mx-auto px-2">
         <div className="text-center mt-8">
-          <h1 className="font-bold text-3xl text-white mb-6 drop-shadow-lg px-6 py-3 rounded-xl inline-block bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 shadow-md">
+          <h1 className="font-bold text-3xl text-white mb-6 drop-shadow-lg px-6 py-3 rounded-xl w-full bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 shadow-md">
             My skills
           </h1>
         </div>
@@ -144,11 +144,29 @@ function App() {
           </div>
         </div>
       </div>
-      <div>
-        school curriculum
-
+      {/* School Curriculum */}
+      <div className="flex flex-col mt-8 md:flex-row items-center justify-center gap-4 md:gap-8 p-4 md:p-8 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 rounded-lg shadow-lg w-full max-w-4xl mx-auto">
+        <div className="text-center md:text-left flex-1">
+          <h1 className="text-2xl md:text-5xl font-bold text-white drop-shadow-lg">
+            School Curriculum
+          </h1>
+          <h2 className="text-white mt-2 font-bold text-base md:text-xl">
+            STI2D course, SIN specialty
+          </h2>
+          <p className='text-white text-sm md:text-base w-full text-justify mt-2'>   
+            ORT, Strasbourg, High School
+          </p>
+          <h2 className="text-white mt-2 font-bold text-base md:text-xl">
+            Master's degree at Epitech (Grande École Program)
+          </h2>
+          <p className='text-white text-sm md:text-base w-full text-justify mt-2'>   
+            ORT, Strasbourg, High School
+          </p>
+        </div>
+        <div>
+          <img src="src/assets/epilogo.png" alt="epilogo" className='h-40' />
+        </div>
       </div>
-
       {/* <Footer /> */}
     </>
   );
