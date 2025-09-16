@@ -1,13 +1,13 @@
 import './App.css'
 import Leo from "../src/assets/leo.png"
-import Navbar from "./components/navbar/navbar";
-import Footer from './components/footer/footer';
+// import Navbar from "./components/navbar/navbar";
+// import Footer from './components/footer/footer';
 
 function App() {
 
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       
       {/* Présentation Card */}
       <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 p-4 md:p-8 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 rounded-lg shadow-lg w-full max-w-4xl mx-auto">
@@ -31,38 +31,77 @@ function App() {
         </div>
       </div>
       {/* Project, jobs/stage, info perso*/}
-      <div className="flex justify-around items-center mt-8 max-w-4xl mx-auto px-2 w-full">
-        <div>
-        <span>🧠</span> Projects
-        <ul>
-          <li>Tardis</li>
-          <p>A prediction app created to display train delays and help passengers anticipate them earlier. The project uses a machine learning model trained to estimate probability of delays based on all data related to past delays recorded, their causes, the number of occurences, and more. Long story short, Tardis is made to help you travel without the stress of being uninformed. 😊</p>
-          <li>TodoList</li>
-          <p>A clean and responsive ToDoList web application with user authentication (Login/Register). Built with modern web technologies to help you stay productive and organized.</p>
-          <li>Plane Radar</li>
-          <p>The Aviation Radar Simulator is a real-time radar system simulation developed in C using CSFML (Simple and Fast Multimedia Library for C). It simulates aircraft movement, radar scanning, and aircraft detection on a 2D map.</p>
-        </ul>
+      <div className="flex flex-col md:flex-row gap-8 items-start mt-8 max-w-4xl mx-auto px-2 w-full">
+        {/* Projects */}
+        <div className="bg-gradient-to-br from-blue-500 via-blue-600 to-blue-700 rounded-xl shadow-lg p-6 flex-1 min-w-[250px]">
+          <h2 className="text-white text-2xl font-bold mb-4 flex items-center gap-2">
+            <span>🧠</span> Projects
+          </h2>
+          <ul className="space-y-4">
+            <li>
+              <span className="text-white font-semibold text-lg">Tardis</span>
+              <p className="text-blue-100 text-sm mt-1">
+                A prediction app created to display train delays and help passengers anticipate them earlier. The project uses a machine learning model trained to estimate probability of delays based on all data related to past delays recorded, their causes, the number of occurences, and more. Long story short, Tardis is made to help you travel without the stress of being uninformed. 😊
+              </p>
+            </li>
+            <li>
+              <span className="text-white font-semibold text-lg">TodoList</span>
+              <p className="text-blue-100 text-sm mt-1">
+                A clean and responsive ToDoList web application with user authentication (Login/Register). Built with modern web technologies to help you stay productive and organized.
+              </p>
+            </li>
+            <li>
+              <span className="text-white font-semibold text-lg">Plane Radar</span>
+              <p className="text-blue-100 text-sm mt-1">
+                The Aviation Radar Simulator is a real-time radar system simulation developed in C using CSFML. It simulates aircraft movement, radar scanning, and aircraft detection on a 2D map.
+              </p>
+            </li>
+          </ul>
         </div>
-        <div>
-          <div>
-            <span>👨🏻‍💻</span> Jobs/Stage
-            <ul>
-              <li>August - Decembre 2025 : Intership at Ubertone</li>
-            </ul>
-            </div>
-          <div>
-            <span>📩</span> Contact me
-            <ul>
-              <li>leo.lacordaire@epitech.eu</li>
-              <li><a href="https://www.linkedin.com/in/l%C3%A9o-lacordaire-b9087b347/">My LinkeDin</a></li>
+        {/* Jobs/Stage & Contact */}
+        <div className="flex flex-col gap-8.5 flex-1 min-w-[250px]">
+          <div className="bg-gradient-to-br from-blue-500 via-blue-600 to-blue-700 rounded-xl shadow-lg p-6">
+            <h2 className="text-white text-2xl font-bold mb-2 flex items-center gap-2">
+              <span>👨🏻‍💻</span> Jobs / Internship
+            </h2>
+            <ul className="text-blue-100 text-base space-y-1">
+              <li>August - Decembre 2025 : Internship at Ubertone</li>
+              <li> July 2024 : Service agent</li>
             </ul>
           </div>
-
+            <div className="bg-gradient-to-br from-blue-500 via-blue-600 to-blue-700 rounded-xl shadow-lg p-6">
+            <h2 className="text-white text-2xl font-bold mb-2 flex items-center gap-2">
+              <span>🎉</span> Associative
+            </h2>
+            <ul className="text-blue-100 text-base space-y-1">
+              <li> Decembre 2025 - Today : Student union member, EPITECH</li>
+            </ul>
+          </div>
+          <div className="bg-gradient-to-br from-blue-500 via-blue-600 to-blue-700 rounded-xl shadow-lg p-6">
+            <h2 className="text-white text-2xl font-bold mb-2 flex items-center gap-2">
+              <span>📩</span> Contact me
+            </h2>
+            <ul className="text-blue-100 text-base space-y-1">
+              <li>leo.lacordaire@epitech.eu</li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/l%C3%A9o-lacordaire-b9087b347/"
+                  className="text-blue-200 underline hover:text-blue-300 transition"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  My LinkedIn
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
       <div className="max-w-4xl mx-auto px-2">
         <div className="text-center mt-8">
-          <h1 className="font-bold drop-shadow-lg text-3xl text-blue-700 mb-6">My skills</h1>
+          <h1 className="font-bold text-3xl text-white mb-6 drop-shadow-lg px-6 py-3 rounded-xl inline-block bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 shadow-md">
+            My skills
+          </h1>
         </div>
         <div className="flex flex-wrap justify-center gap-6 mt-4">
           {/* Software */}
@@ -110,7 +149,7 @@ function App() {
 
       </div>
 
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

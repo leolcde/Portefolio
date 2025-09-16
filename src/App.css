@@ -7,6 +7,10 @@
   text-align: center;
 }
 
+body {
+  background-color: rgb(192, 211, 248);
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
